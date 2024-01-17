@@ -1,5 +1,9 @@
 # Poker Agile
 
+<a href="https://discord.gg/Uvm5Y46g7a" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://paypal.me/rjouffret" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ffffff.svg"/></a>
+
+
 Thank you for checking out this repo. This is the server part of the Poker Agile Product.
 
 ## Description
