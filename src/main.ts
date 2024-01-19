@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { NextFunction, Response, Request } from 'express';
+import { Database } from 'sqlite3';
 
 function cacheControlMiddleware(
   _request: Request,
@@ -16,6 +17,8 @@ function cacheControlMiddleware(
 }
 
 async function bootstrap() {
+  const db = new Database('db.sqlite');
+
   const app = await NestFactory.create(AppModule);
 
   app.use(cacheControlMiddleware);
@@ -30,6 +33,10 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
   await app.listen(3000);
+
+  console.log(
+    db.get('SELECT RANDOM() % 100 as result', (_, res) => console.log(res)),
+  );
 }
 
 bootstrap();
