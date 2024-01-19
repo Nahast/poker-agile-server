@@ -33,5 +33,3 @@ async function bootstrap() {
 }
 
 bootstrap();
-
-// DB password: poker123!
